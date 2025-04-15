@@ -3,22 +3,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Greeting name="Maksim"/>
+    <MyButton label="Жми меня" onClick={()=> alert("Меня нажали")}/>
+    <MyButton label="Не жми меня" onClick={()=> alert("Меня все-таки нажали")}/>
+    <ItemList items = {['яблоко', 'банан', 'чурчхела', 'тыблоко']}/>
+    <ItemSelector items = {['яблоко', 'банан', 'чурчхела']}
+     onSelect={(elem) => alert(`Вы выбрали: ${elem}`)}
+    />
+    </>
   );
 }
 
